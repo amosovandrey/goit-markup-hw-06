@@ -215,7 +215,7 @@ body {
 
   color: var(--title-white-color);
 }
-.hero-btn {
+.btn {
   padding: 16px 32px;
 
   font-family: inherit;
@@ -424,12 +424,14 @@ body {
 
 .footer-info {
   display: flex;
-  gap: 120px;
+
   align-items: baseline;
 }
 
 /* ------------- LOGO FOOTER ------------- */
-
+.footer-desc-wrap {
+  margin-right: 120px;
+}
 .footer-logo {
   display: block;
   margin-bottom: 16px;
@@ -447,14 +449,17 @@ body {
   color: var(--brand-color);
 }
 
-.footer-text {
+.footer-desc-text {
   max-width: 264px;
   color: var(--accent-color);
 }
 
 /* ------------- FOOTER SOCIAL ------------- */
+.footer-soc {
+  margin-right: 80px;
+}
 
-.footer-soc-text {
+.footer-headling {
   display: block;
   font-weight: 500;
 
@@ -492,6 +497,63 @@ body {
 
 .footer-soc-icon {
   fill: var(--light-color);
+}
+
+/* ------------- SUBSCRIBE ------------- */
+
+.footer-subscribe {
+}
+.footer-subscribe-text {
+}
+.footer-headling {
+}
+.subscribe-form-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.subscribe-form {
+}
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+
+  color: var(--accent-color);
+}
+
+.subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(24 / 12);
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input:focus {
+  border-color: var(--brand-color);
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--active-color);
+}
+
+.footer-subsribe-icon {
+  fill: var(--title-white-color);
 }
 /* ------------- PORTFOLIO.HTML ------------- */
 
@@ -618,6 +680,9 @@ body {
 
 .modal {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 50%;
   left: 50%;
 
@@ -648,7 +713,7 @@ body {
   justify-content: center;
 
   margin-left: auto;
-
+  margin-bottom: 24px;
   cursor: pointer;
 }
 
@@ -660,4 +725,16 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.modal-headling {
+  margin-bottom: 16px;
+  color: var(--dark-color);
+}
+
+.modal-input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
