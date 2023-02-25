@@ -844,6 +844,11 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.modal-comment-text:focus {
+  border: 1px solid var(--brand-color);
+  border-radius: 4px;
+}
+
 .modal-checkbox-wrap {
   display: flex;
   margin-bottom: 24px;
