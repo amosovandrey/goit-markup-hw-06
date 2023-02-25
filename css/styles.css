@@ -44,19 +44,19 @@ img {
   height: auto;
 }
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  background-color: var(--title-white-color);
 
   color: var(--text-color);
-  background-color: var(--title-white-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 .container {
   width: 100%;
   max-width: 1158px;
-  padding: 0 15px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .link {
   text-decoration: none;
@@ -68,15 +68,15 @@ body {
 
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
   border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
+  white-space: nowrap;
   clip-path: inset(50%);
-  margin: -1px;
+  clip: rect(0 0 0 0);
 }
 
 /* ------------- INDEX.HTML ------------- */
@@ -96,19 +96,19 @@ body {
   margin-right: auto;
 }
 .header-logo {
+  margin-right: 76px;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 76px;
-
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 
   color: var(--dark-color);
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+  line-height: 1.33;
+  text-transform: uppercase;
 }
 .logo-accent {
   color: var(--brand-color);
@@ -128,9 +128,9 @@ body {
 .header-list-link {
   padding-top: 24px;
   padding-bottom: 24px;
-  font-weight: 500;
 
   color: var(--dark-color);
+  font-weight: 500;
   transition: color var(--time) var(--timing-function);
 }
 
@@ -143,17 +143,17 @@ body {
   position: relative;
 }
 .current::after {
-  content: '';
+  display: block;
 
   position: absolute;
   top: 100%;
   left: 0;
-  display: block;
+  width: 100%;
 
   height: 4px;
-  width: 100%;
-  background: var(--active-color);
   border-radius: 2px;
+  background: var(--active-color);
+  content: '';
 }
 
 /* ------------- CONTACTS ------------- */
@@ -169,9 +169,9 @@ body {
 .header-contacts-item {
   padding-top: 24px;
   padding-bottom: 24px;
-  font-style: normal;
 
   color: inherit;
+  font-style: normal;
 
   transition: color var(--time) var(--timing-function);
 }
@@ -186,6 +186,9 @@ body {
 .hero {
   max-width: 1440px;
   margin: 0 auto;
+
+  padding-top: 188px;
+  padding-bottom: 188px;
   background-color: var(--dark-color);
 
   background-image: linear-gradient(
@@ -193,43 +196,40 @@ body {
       var(--hero-background-color)
     ),
     url(../images/bg-people-office-min.jpeg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-
-  padding-top: 188px;
-  padding-bottom: 188px;
 
   text-align: center;
 }
 
 .hero-title {
+  max-width: 494px;
   margin: 0 auto;
 
   margin-bottom: 48px;
-  max-width: 494px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
 
   color: var(--title-white-color);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  text-align: center;
 }
 .btn {
   padding: 16px 32px;
-
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-
-  letter-spacing: 0.04em;
-
-  color: var(--title-white-color);
+  border: none;
+  border-radius: 4px;
   background-color: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
+
+  color: var(--title-white-color);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+  line-height: 1.5;
   cursor: pointer;
 
   transition: background-color var(--time) var(--timing-function);
@@ -266,20 +266,20 @@ body {
   width: 264px;
   height: 112px;
 
-  background: var(--light-color);
+  margin-bottom: 8px;
   border-radius: 4px;
 
-  margin-bottom: 8px;
+  background: var(--light-color);
 }
 
 .list-title {
   margin-bottom: 8px;
 
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-
   color: var(--dark-color);
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 /* ------------- DESCRIPTION ------------- */
@@ -291,14 +291,14 @@ body {
   display: block;
   margin: 0 auto;
   margin-bottom: 72px;
-  text-align: center;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-transform: capitalize;
 
   color: var(--dark-color);
+  font-size: 36px;
+
+  font-weight: 700;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .description-list {
@@ -320,15 +320,15 @@ body {
   align-items: center;
 }
 .team-list-item {
+  border-radius: 0px 0px 4px 4px;
   background: var(--title-white-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
 }
 .team-list > li {
   display: block;
-  text-align: center;
   margin-right: 24px;
+  text-align: center;
 }
 .team-list :last-child {
   margin-right: 0;
@@ -353,13 +353,12 @@ body {
   height: 40px;
 }
 .team-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--brand-color);
 
   transition: background-color var(--time) var(--timing-function);
@@ -390,12 +389,11 @@ body {
   height: 88px;
 }
 .customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
@@ -435,15 +433,15 @@ body {
 .footer-logo {
   display: block;
   margin-bottom: 16px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 
   color: var(--light-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+  line-height: 1.33;
+  text-transform: uppercase;
 }
 .logo-accent {
   color: var(--brand-color);
@@ -461,11 +459,11 @@ body {
 
 .footer-headling {
   display: block;
-  font-weight: 500;
 
   margin-bottom: 16px;
 
   color: var(--title-white-color);
+  font-weight: 500;
 }
 
 .footer-soc-list {
@@ -479,13 +477,12 @@ body {
   height: 40px;
 }
 .footer-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
 
   transition: background-color var(--time) var(--timing-function);
@@ -517,25 +514,24 @@ body {
   width: 264px;
   height: 40px;
   padding: 8px 16px;
-  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(24 / 12);
+  background-color: transparent;
 
   color: var(--accent-color);
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: calc(24 / 12);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .subscribe-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(24 / 12);
-
   color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: calc(24 / 12);
 }
 
 .subscribe-input:focus {
@@ -545,8 +541,8 @@ body {
 .subscribe-btn {
   display: flex;
   align-items: center;
-  gap: 16px;
   padding: 8px 24px;
+  gap: 16px;
 }
 
 .subscribe-btn:hover,
@@ -570,23 +566,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
   margin-bottom: 72px;
+  gap: 24px;
 }
 .filter-btn {
-  font-family: inherit;
   padding: 12px 24px;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-
-  font-weight: 500;
-  font-size: inherit;
-  line-height: inherit;
-
-  letter-spacing: 0.04em;
+  background-color: var(--light-color);
 
   color: var(--brand-color);
-  background-color: var(--light-color);
+  font-family: inherit;
+  font-size: inherit;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+  line-height: inherit;
 
   cursor: pointer;
 
@@ -598,18 +594,18 @@ body {
 
 .filter-btn:hover,
 .filter-btn:focus {
+  border: 1px solid transparent;
+  background-color: var(--active-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: 1px solid transparent;
 
   color: var(--title-white-color);
-  background-color: var(--active-color);
 }
 .filter-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 48px;
   column-gap: 24px;
+  row-gap: 48px;
 }
 
 .filter-list > li {
@@ -626,14 +622,14 @@ body {
   height: 100%;
   padding: 40px 32px;
 
-  color: var(--light-color);
-  background-color: var(--brand-color);
+  overflow: auto;
 
   transform: translateY(100%);
+  background-color: var(--brand-color);
+
+  color: var(--light-color);
 
   transition: transform var(--time) var(--timing-function);
-
-  overflow: auto;
 }
 
 .filter-list > li:is(:hover, :focus) .filter-cover-text {
@@ -681,41 +677,40 @@ body {
 }
 
 .modal {
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%, -50%) scaleY(1);
-  transition: transform 500ms var(--timing-function) 250ms;
+  flex-direction: column;
+  align-items: center;
 
   width: 408px;
   min-height: 576px;
 
   padding: 24px;
 
+  transform: translate(-50%, -50%) scaleY(1);
+  border-radius: 4px;
+
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  transition: transform 500ms var(--timing-function) 250ms;
 }
 
 .modal-close {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-
-  background: var(--accent-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 24px;
 
   margin-left: auto;
-  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background: var(--accent-color);
   cursor: pointer;
 
   transition: background var(--time) var(--timing-function),
@@ -723,13 +718,13 @@ body {
 }
 
 .modal-close-icon {
-  fill: #000000;
   transition: fill var(--time) var(--timing-function);
+  fill: #000000;
 }
 
 .modal-close:is(:hover, :focus) {
-  background: var(--active-color);
   border-color: transparent;
+  background: var(--active-color);
 }
 
 .modal-close:is(:hover, :focus) .modal-close-icon {
@@ -737,8 +732,8 @@ body {
 }
 
 .backdrop.is-hidden {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -748,47 +743,47 @@ body {
 }
 
 .modal-label {
-  position: relative;
   display: block;
+  position: relative;
   margin-bottom: 8px;
 }
 
 .modal-label-text {
   margin-bottom: 4px;
 
-  font-weight: 400;
+  color: var(--subtle-text-color);
   font-size: 12px;
-  line-height: calc(16 / 12);
+
+  font-weight: 400;
 
   letter-spacing: 0.04em;
-
-  color: var(--subtle-text-color);
+  line-height: calc(16 / 12);
 }
 
 .modal-input-icon {
-  position: absolute;
   display: inline-block;
+  position: absolute;
   bottom: 8px;
   left: 16px;
 
-  fill: var(--dark-color);
-
   transition: fill var(--time) var(--timing-function);
+
+  fill: var(--dark-color);
 }
 
 .modal-input {
   width: 360px;
   height: 40px;
+  padding: 8px 16px 8px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  padding: 8px 16px 8px 38px;
 
   color: var(--text-color);
-  font-weight: 400;
   font-size: 12px;
-  line-height: calc(16 / 12);
+  font-weight: 400;
   letter-spacing: 0.04em;
+  line-height: calc(16 / 12);
 
   transition: border-color var(--time) var(--timing-function);
 }
@@ -809,39 +804,40 @@ body {
 .modal-comment-label {
   margin-bottom: 4px;
 
-  font-weight: 400;
+  color: var(--subtle-text-color);
   font-size: 12px;
-  line-height: calc(16 / 12);
+
+  font-weight: 400;
 
   letter-spacing: 0.04em;
-
-  color: var(--subtle-text-color);
+  line-height: calc(16 / 12);
 }
 
 .modal-comment-text {
   width: 360px;
   height: 120px;
   padding: 8px 16px;
-  resize: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
   outline: none;
 
   color: var(--text-color);
-  font-weight: 400;
   font-size: 12px;
-  line-height: calc(16 / 12);
+  font-weight: 400;
   letter-spacing: 0.04em;
+  line-height: calc(16 / 12);
+  resize: none;
 }
 
 .modal-comment-text::placeholder {
-  font-weight: 400;
+  color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
-  line-height: calc(16 / 12);
+  font-weight: 400;
 
   letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
+  line-height: calc(16 / 12);
 }
 
 .modal-comment-text:focus {
@@ -856,13 +852,13 @@ body {
 
 .modal-checkbox-label {
   display: flex;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-
-  letter-spacing: 0.04em;
 
   color: var(--subtle-text-color);
+  font-size: 12px;
+  font-weight: 400;
+
+  letter-spacing: 0.04em;
+  line-height: calc(16 / 12);
 }
 
 .modal-checkbox-link {
@@ -885,9 +881,8 @@ body {
   fill: transparent;
 }
 .modal-checkbox-input:checked + .modal-checkbox-label .modal-checkbox-icon {
-  background: var(--active-color);
-
   border: 1px solid var(--active-color);
+  background: var(--active-color);
 
   fill: var(--title-white-color);
 }
